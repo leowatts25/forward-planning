@@ -104,6 +104,24 @@ export default function PortfolioPage() {
                 </div>
               )}
             </div>
+
+            {item.video && (
+              <div className="border-t border-border p-8 sm:col-span-2 sm:p-10">
+                <p className="text-xs font-semibold uppercase tracking-wide text-foreground">
+                  {item.video.title}
+                </p>
+                <div className="mt-4 aspect-video w-full overflow-hidden rounded-xl">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${item.video.youtubeId}`}
+                    title={item.video.title}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            )}
           </article>
         ))}
       </div>

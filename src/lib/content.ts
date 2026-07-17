@@ -122,6 +122,7 @@ export type PortfolioItem = {
   imageCredit: string;
   featuredIn?: { label: string; url: string }[];
   partners?: { name: string; url: string; note: string }[];
+  video?: { youtubeId: string; title: string };
 };
 
 export const portfolio: PortfolioItem[] = [
@@ -140,6 +141,10 @@ export const portfolio: PortfolioItem[] = [
     image: "/images/portfolio-restorative-farms.jpg",
     imageAlt: "Raised garden beds at an organic urban farm",
     imageCredit: "SamHolt6 / Wikimedia Commons, CC BY-SA 4.0",
+    video: {
+      youtubeId: "4u-QHf2-VeY",
+      title: '"Grow a Better Dallas" — Official Trailer',
+    },
     featuredIn: [
       {
         label: "SMU News — \"Restorative Farms cultivates prosperity with urban farming\"",
