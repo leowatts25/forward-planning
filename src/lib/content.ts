@@ -153,7 +153,7 @@ export const team: TeamMember[] = [
     slug: "leo-watts",
     name: "Leo Watts",
     role: "Entrepreneurial Director",
-    bio: "Leo is an international development and business development professional based in Seville, Spain, where he's completing a Master's in Human Rights, Interculturality and Development. He founded Cooperatr and previously led private sector engagement at Winrock International, building partnerships across Asia, Africa, and Latin America.",
+    bio: "Leo is an international development and business development professional based in Seville, Spain, where he's completing a Master's in Human Rights, Interculturality and Development. He founded Cooperatr, connecting European SMEs with international development funding, and previously worked in private sector engagement at Winrock International, building partnerships with organizations like Better Cotton, Bayer, and AB InBev across Asia, Africa, and Latin America. He also founded and sold two earlier companies, in educational consulting and real estate.",
     credentials: [
       "B.A. Interdisciplinary Studies, University of Texas at Dallas",
       "Master's in Human Rights, Interculturality and Development, Universidad Internacional de Andalucía (in progress)",
@@ -164,7 +164,7 @@ export const team: TeamMember[] = [
     slug: "aidan-earle",
     name: "Aidan Earle",
     role: "Design and Marketing Director",
-    bio: "Aidan is a Seattle-based graphic designer specializing in digital marketing and creative design, with expertise in animation, illustration, and 3D modeling.",
+    bio: "Aidan brings years of experience in fine arts and digital rendering to commercial production, specializing in animation, illustration, and 3D modeling for marketing and creative design. He's also hands-on in local sustainable agriculture, permaculture, and urban gardening — a natural fit for Forward Planning's community and agricultural work.",
     photo: "/images/team/aidan-earle.jpg",
   },
 ];
