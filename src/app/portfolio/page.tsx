@@ -62,6 +62,47 @@ export default function PortfolioPage() {
                   </li>
                 ))}
               </ul>
+
+              {item.partners && (
+                <div className="mt-6 border-t border-border pt-6">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-foreground">
+                    Corporate & Community Partners
+                  </p>
+                  <ul className="mt-3 space-y-2">
+                    {item.partners.map((partner) => (
+                      <li key={partner.name} className="text-sm text-muted-foreground">
+                        <a
+                          href={partner.url}
+                          className="font-medium text-primary hover:underline"
+                        >
+                          {partner.name}
+                        </a>{" "}
+                        — {partner.note}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {item.featuredIn && (
+                <div className="mt-6 border-t border-border pt-6">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-foreground">
+                    As Featured In
+                  </p>
+                  <ul className="mt-3 space-y-2">
+                    {item.featuredIn.map((mention) => (
+                      <li key={mention.url} className="text-sm">
+                        <a
+                          href={mention.url}
+                          className="text-primary hover:underline"
+                        >
+                          {mention.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </article>
         ))}

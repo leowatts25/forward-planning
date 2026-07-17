@@ -31,19 +31,6 @@ export default function ContactPage() {
               {siteConfig.email}
             </a>
           </div>
-          <div>
-            <p className="text-sm font-medium text-foreground">Phone</p>
-            <a
-              href={`tel:${siteConfig.phoneHref}`}
-              className="text-muted-foreground hover:text-primary"
-            >
-              {siteConfig.phone}
-            </a>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-foreground">Office</p>
-            <p className="text-muted-foreground">{siteConfig.address}</p>
-          </div>
         </div>
 
         <div className="rounded-2xl border border-border p-6">

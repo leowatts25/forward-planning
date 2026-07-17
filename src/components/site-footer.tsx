@@ -34,10 +34,6 @@ export function SiteFooter() {
           <a href={`mailto:${siteConfig.email}`} className="hover:text-primary">
             {siteConfig.email}
           </a>
-          <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-primary">
-            {siteConfig.phone}
-          </a>
-          <p>{siteConfig.address}</p>
           <div className="mt-2 flex gap-4">
             <a href={siteConfig.facebook} className="hover:text-primary">
               Facebook
