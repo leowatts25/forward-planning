@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { portfolio, services, siteConfig } from "@/lib/content";
 
@@ -10,45 +11,59 @@ const credentials = [
 export default function Home() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-wide text-accent">
-            {siteConfig.tagline}
-          </p>
-          <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight text-primary sm:text-5xl">
-            Strategic consulting for entrepreneurs & nonprofits
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Whether you&apos;re launching a business, scaling an organization, or
-            navigating a crossroads — Forward Planning gives you the strategy,
-            tools, and expertise to move forward with confidence.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Book a Free Consultation
-            </Link>
-            <Link
-              href="/services"
-              className="rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
-            >
-              See how we help
-            </Link>
-          </div>
-        </div>
+      <section className="relative isolate overflow-hidden">
+        <Image
+          src={siteConfig.heroImage}
+          alt={siteConfig.heroImageAlt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/50" />
 
-        <dl className="mt-16 grid grid-cols-1 gap-8 border-t border-border pt-10 sm:grid-cols-3">
-          {credentials.map((item) => (
-            <div key={item.label}>
-              <dt className="font-serif text-3xl font-semibold text-primary">
-                {item.stat}
-              </dt>
-              <dd className="mt-1 text-sm text-muted-foreground">{item.label}</dd>
+        <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+              {siteConfig.tagline}
+            </p>
+            <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight text-primary-foreground sm:text-5xl">
+              Strategic consulting for entrepreneurs & nonprofits
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-primary-foreground/85">
+              Whether you&apos;re launching a business, scaling an organization, or
+              navigating a crossroads — Forward Planning gives you the strategy,
+              tools, and expertise to move forward with confidence.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
+              >
+                Book a Free Consultation
+              </Link>
+              <Link
+                href="/services"
+                className="rounded-full border border-primary-foreground/30 px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:border-primary-foreground"
+              >
+                See how we help
+              </Link>
             </div>
-          ))}
-        </dl>
+          </div>
+
+          <dl className="mt-16 grid grid-cols-1 gap-8 border-t border-primary-foreground/20 pt-10 sm:grid-cols-3">
+            {credentials.map((item) => (
+              <div key={item.label}>
+                <dt className="font-serif text-3xl font-semibold text-primary-foreground">
+                  {item.stat}
+                </dt>
+                <dd className="mt-1 text-sm text-primary-foreground/70">
+                  {item.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
       <section className="bg-muted py-20">
@@ -74,7 +89,7 @@ export default function Home() {
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {service.description}
                 </p>
-                <p className="mt-4 text-xs font-medium uppercase tracking-wide text-accent">
+                <p className="mt-4 text-xs font-medium uppercase tracking-wide text-secondary">
                   Best for: {service.bestFor}
                 </p>
               </div>
@@ -100,17 +115,31 @@ export default function Home() {
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {portfolio.map((item) => (
-            <div key={item.slug} className="rounded-2xl border border-border p-6">
-              <p className="text-xs font-medium uppercase tracking-wide text-accent">
-                {item.category}
-              </p>
-              <h3 className="mt-2 font-serif text-lg font-semibold text-primary">
-                {item.name}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                {item.summary}
-              </p>
+          {portfolio.slice(0, 3).map((item) => (
+            <div
+              key={item.slug}
+              className="overflow-hidden rounded-2xl border border-border"
+            >
+              <div className="relative h-40 w-full">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <p className="text-xs font-medium uppercase tracking-wide text-secondary">
+                  {item.category}
+                </p>
+                <h3 className="mt-2 font-serif text-lg font-semibold text-primary">
+                  {item.name}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  {item.summary}
+                </p>
+              </div>
             </div>
           ))}
         </div>

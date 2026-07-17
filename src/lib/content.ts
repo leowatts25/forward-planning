@@ -10,6 +10,12 @@ export const siteConfig = {
   facebook: "https://www.facebook.com/forwardplanning.biz/",
   linkedin: "https://www.linkedin.com/company/forwardplanning/",
   podcast: "https://www.reinvent4good.org/",
+  heroImage: "/images/hero-dallas-skyline.jpg",
+  heroImageAlt: "Downtown Dallas skyline with the Arts District",
+  heroImageCredit: "Gattacal / Wikimedia Commons, CC BY-SA 4.0",
+  teamBannerImage: "/images/team-dallas-birdseye.jpg",
+  teamBannerImageAlt: "Klyde Warren Park, a green public park in downtown Dallas",
+  teamBannerImageCredit: "Joe Mabel / Wikimedia Commons, CC BY-SA 3.0",
 };
 
 export const navLinks = [
@@ -113,6 +119,9 @@ export type PortfolioItem = {
   category: string;
   summary: string;
   details: string[];
+  image: string;
+  imageAlt: string;
+  imageCredit: string;
 };
 
 export const portfolio: PortfolioItem[] = [
@@ -128,6 +137,9 @@ export const portfolio: PortfolioItem[] = [
       "2026 Texas Environmental Excellence Awards finalist",
       "Co-founded with Dr. Owen Lynch, Brad Boa, and Tyrone Day; Dr. Earle serves as volunteer CFO",
     ],
+    image: "/images/portfolio-restorative-farms.jpg",
+    imageAlt: "Raised garden beds at an organic urban farm",
+    imageCredit: "SamHolt6 / Wikimedia Commons, CC BY-SA 4.0",
   },
   {
     slug: "hatcher-station-farms",
@@ -139,6 +151,9 @@ export const portfolio: PortfolioItem[] = [
       "Developed in partnership with DART",
       "Focused on hands-on training and community food access",
     ],
+    image: "/images/portfolio-hatcher-station.jpg",
+    imageAlt: "Rows of crops growing at an urban training farm",
+    imageCredit: "SamHolt6 / Wikimedia Commons, CC BY-SA 4.0",
   },
   {
     slug: "the-hatchery",
@@ -147,5 +162,24 @@ export const portfolio: PortfolioItem[] = [
     summary:
       "A retail entrepreneur storefront designed to help launch small, local retail businesses with lower overhead and hands-on support.",
     details: ["In development", "Retail incubation model for local entrepreneurs"],
+    image: "/images/portfolio-the-hatchery.jpg",
+    imageAlt: "Local shops in the Bishop Arts District, Dallas, Texas",
+    imageCredit: "Michael Barera / Wikimedia Commons, CC BY-SA 4.0",
+  },
+  {
+    slug: "smu-impact-lab",
+    name: "SMU Impact Lab",
+    category: "Social Impact Investing & Venture Diligence",
+    summary:
+      "A student-led diligence program at SMU that evaluates real companies and social ventures, turning classroom rigor into investment recommendations and mentorship for founders.",
+    details: [
+      "Co-Directed by Dr. Doric Earle",
+      "Backed by the Phillips Foundation for social, creative, and arts entrepreneurship",
+      "Combines coursework, workshops, and an active Advisory Board of Dallas leaders",
+      "Cross-disciplinary: draws faculty from Cox, Lyle, and Meadows",
+    ],
+    image: "/images/portfolio-smu-impact-lab.jpg",
+    imageAlt: "Meadows School of the Arts building at SMU",
+    imageCredit: "Wikimedia Commons, public domain",
   },
 ];

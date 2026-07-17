@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { navLinks, siteConfig } from "@/lib/content";
+import { navLinks, portfolio, siteConfig } from "@/lib/content";
+
+const photoCredits = Array.from(
+  new Set([
+    siteConfig.heroImageCredit,
+    siteConfig.teamBannerImageCredit,
+    ...portfolio.map((item) => item.imageCredit),
+  ])
+);
 
 export function SiteFooter() {
   return (
@@ -46,6 +54,9 @@ export function SiteFooter() {
 
       <div className="border-t border-border px-6 py-4 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} {siteConfig.name} LLC. All rights reserved.
+        <span className="mt-1 block">
+          Photos: {photoCredits.join(" · ")}
+        </span>
       </div>
     </footer>
   );
