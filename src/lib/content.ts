@@ -111,6 +111,8 @@ export type TeamMember = {
   role: string;
   bio: string;
   credentials?: string[];
+  photo?: string;
+  photoCredit?: string;
 };
 
 export const team: TeamMember[] = [
@@ -118,6 +120,8 @@ export const team: TeamMember[] = [
     slug: "doric-earle",
     name: "Dr. Doric Earle",
     role: "Founder & Principal Consultant",
+    photo: "/images/team/doric-earle.jpg",
+    photoCredit: "SMU Meadows School of the Arts faculty page",
     bio: "After 30 years managing large technology consultancies, Dr. Earle reinvented himself around a single question: how do you use economic development, communication, and community engagement to unlock potential in underserved communities? He is a Professor of Practice at SMU's Meadows School of the Arts (Corporate Communication & Public Affairs), Director of Nonprofit & Arts Leadership Advisory, Co-Director of the SMU Impact Lab, and Director of the SMU-in-London program. He co-founded Restorative Farms — an award-winning, USDA-certified urban farm training and employing South Dallas residents — where he serves as CFO, and Dallas Unity Fund LLC, a community-based real estate platform. He also hosts the podcast Reinvent Yourself For Good. In 2023 he received the UN Day Global Leadership Award. He serves on the boards of Frazier Revitalization, Bridge Lacrosse, Green Careers Dallas, and Miles of Freedom.",
     credentials: [
       "B.S. Management, Syracuse University",
@@ -134,6 +138,8 @@ export const team: TeamMember[] = [
       "Associate Professor, SMU Meadows School of the Arts",
       "Senior Research Fellow, Hunt Institute for Engineering & Humanity",
     ],
+    photo: "/images/team/owen-lynch.jpg",
+    photoCredit: "Kim Leeson, via SMU Meadows School of the Arts",
   },
   {
     slug: "leo-watts",
@@ -146,6 +152,8 @@ export const team: TeamMember[] = [
     name: "Aidan Earle",
     role: "Design and Marketing Director",
     bio: "Aidan is a Seattle-based graphic designer specializing in digital marketing and creative design, with expertise in animation, illustration, and 3D modeling.",
+    photo: "/images/team/aidan-earle.jpg",
+    photoCredit: "Behance",
   },
 ];
 

@@ -39,11 +39,26 @@ export default function TeamPage() {
               className="grid grid-cols-1 gap-6 border-t border-border pt-10 sm:grid-cols-[200px_1fr]"
             >
               <div>
-                <div className="aspect-square w-full rounded-2xl bg-muted" />
+                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-muted">
+                  {member.photo && (
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      sizes="200px"
+                      className="object-cover"
+                    />
+                  )}
+                </div>
                 <h2 className="mt-4 font-serif text-lg font-semibold text-primary">
                   {member.name}
                 </h2>
                 <p className="text-sm text-muted-foreground">{member.role}</p>
+                {member.photoCredit && (
+                  <p className="mt-1 text-xs text-muted-foreground/70">
+                    Photo: {member.photoCredit}
+                  </p>
+                )}
               </div>
               <div>
                 <p className="text-base leading-7 text-muted-foreground">
