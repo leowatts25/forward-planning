@@ -365,4 +365,20 @@ export const blogPosts: BlogPost[] = [
       'Now more than ever, it is time to create your own destiny, and rebuild your own economic and social impact.',
     ],
   },
+  {
+    slug: "how-to-become-a-successful-social-entrepreneur",
+    title: "How to Become a Successful Social Entrepreneur",
+    date: "2026-01-18",
+    author: "Doric Earle",
+    excerpt:
+      "A curated read on what separates successful social enterprises from the rest — self-sustaining models, intermediary roles, and creative uses of technology.",
+    body: [
+      "A read worth sharing: social entrepreneurship blends commerce with social issues, sitting somewhere between government intervention and traditional business to tackle problems that don't attract enough private capital on their own.",
+      "The piece outlines a few patterns behind successful social enterprises — building self-sustaining models that reduce reliance on philanthropic funding as they scale, acting as intermediaries between government, nonprofits, and business, and creative uses of technology, from cheaper alternatives to entirely new infrastructure.",
+    ],
+    externalSource: {
+      label: "Read the original article on Entrepreneur.com",
+      url: "https://www.entrepreneur.com/",
+    },
+  },
 ];
