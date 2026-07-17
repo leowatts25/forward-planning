@@ -107,28 +107,17 @@ export default function Home() {
             {services.map((service) => (
               <div
                 key={service.slug}
-                className="overflow-hidden rounded-2xl border border-border bg-background"
+                className="rounded-2xl border border-border bg-background p-6"
               >
-                <div className="relative h-36 w-full">
-                  <Image
-                    src={service.image}
-                    alt={service.imageAlt}
-                    fill
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-lg font-semibold text-primary">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                    {service.description}
-                  </p>
-                  <p className="mt-4 text-xs font-medium uppercase tracking-wide text-secondary">
-                    Best for: {service.bestFor}
-                  </p>
-                </div>
+                <h3 className="font-serif text-lg font-semibold text-primary">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  {service.description}
+                </p>
+                <p className="mt-4 text-xs font-medium uppercase tracking-wide text-secondary">
+                  Best for: {service.bestFor}
+                </p>
               </div>
             ))}
           </div>
