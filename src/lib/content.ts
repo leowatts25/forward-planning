@@ -121,7 +121,7 @@ export const team: TeamMember[] = [
     name: "Dr. Doric Earle",
     role: "Founder & Principal Consultant",
     photo: "/images/team/doric-earle.jpg",
-    photoCredit: "SMU Meadows School of the Arts faculty page",
+    photoCredit: "SMU Impact Lab, Meadows School of the Arts",
     bio: "After 30 years managing large technology consultancies, Dr. Earle reinvented himself around a single question: how do you use economic development, communication, and community engagement to unlock potential in underserved communities? He is a Professor of Practice at SMU's Meadows School of the Arts (Corporate Communication & Public Affairs), Director of Nonprofit & Arts Leadership Advisory, Co-Director of the SMU Impact Lab, and Director of the SMU-in-London program. He co-founded Restorative Farms — an award-winning, USDA-certified urban farm training and employing South Dallas residents — where he serves as CFO, and Dallas Unity Fund LLC, a community-based real estate platform. He also hosts the podcast Reinvent Yourself For Good. In 2023 he received the UN Day Global Leadership Award. He serves on the boards of Frazier Revitalization, Bridge Lacrosse, Green Careers Dallas, and Miles of Freedom.",
     credentials: [
       "B.S. Management, Syracuse University",
@@ -145,7 +145,11 @@ export const team: TeamMember[] = [
     slug: "leo-watts",
     name: "Leo Watts",
     role: "Entrepreneurial Director",
-    bio: "Leo is a master's student in International Development & Human Rights at the University of Andalucía, based in Seville, Spain. He founded Cooperatr.com, connecting European SMEs with international development funding, and previously worked as a public-private development officer for Winrock International. He studied at NYU's Gallatin School and the University of Texas at Dallas, and is fluent in Spanish, Portuguese, Italian, French, and English.",
+    bio: "Leo is an international development and business development professional based in Seville, Spain, currently completing a Master's in Human Rights, Interculturality and Development at the Universidad Internacional de Andalucía. He founded Cooperatr, an AI-powered platform for grant and public tender writing, and leads strategic partnerships work at Maison Barlovento and Veridicor. Previously, as Private Sector Engagement Officer at Winrock International, he designed partnerships with organizations including Better Cotton, Bayer, AB InBev, and Corteva, and contributed to more than $100M in won awards across climate, agriculture, and counter-trafficking programming in Asia, Africa, and Latin America. Before that, he founded and sold two companies: Dallas Admissions Consulting, an educational consulting firm, and a real estate investment venture, Watts Capital Group. He studied at NYU's Gallatin School and the University of Texas at Dallas, and is fluent in Spanish, with advanced Portuguese and working French.",
+    credentials: [
+      "B.A. Interdisciplinary Studies, University of Texas at Dallas",
+      "Master's in Human Rights, Interculturality and Development, Universidad Internacional de Andalucía (in progress)",
+    ],
   },
   {
     slug: "aidan-earle",
