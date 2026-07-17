@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { portfolio, pressLogos, services, siteConfig } from "@/lib/content";
+import { podcast, portfolio, pressLogos, services, siteConfig } from "@/lib/content";
 
 const credentials = [
   { stat: "30+", label: "years in executive & technology consulting" },
@@ -176,6 +176,35 @@ export default function Home() {
         >
           View full portfolio →
         </Link>
+      </section>
+
+      <section className="bg-muted py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-2xl border border-border bg-background p-8 sm:p-12">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-xl">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                  The Podcast
+                </p>
+                <h2 className="mt-2 font-serif text-2xl font-semibold text-primary">
+                  {podcast.name}
+                </h2>
+                <p className="mt-2 text-sm italic text-muted-foreground">
+                  &ldquo;{podcast.tagline}&rdquo;
+                </p>
+                <p className="mt-4 text-sm leading-6 text-muted-foreground">
+                  {podcast.description}
+                </p>
+              </div>
+              <a
+                href={podcast.url}
+                className="inline-block shrink-0 rounded-full bg-primary px-6 py-3 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Listen to the podcast
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="bg-primary py-16">

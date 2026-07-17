@@ -15,6 +15,14 @@ export const siteConfig = {
   teamBannerImageCredit: "Joe Mabel / Wikimedia Commons, CC BY-SA 3.0",
 };
 
+export const podcast = {
+  name: "Reinvent Yourself For Good",
+  url: "https://www.reinvent4good.org/podcast",
+  tagline: "There is more to life than capitalism and consumption.",
+  description:
+    "Hosted by Dr. Doric Earle, a companion podcast to his book Reinventing Yourself For Good, For Good — candid, unedited conversations with people who made real career pivots into meaningful work.",
+};
+
 export const pressLogos = [
   {
     name: "SMU News",
