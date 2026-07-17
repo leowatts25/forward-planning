@@ -4,7 +4,7 @@ import { portfolio, services, siteConfig } from "@/lib/content";
 
 const credentials = [
   { stat: "30+", label: "years in executive & technology consulting" },
-  { stat: "3", label: "active community & economic development ventures" },
+  { stat: "2023", label: "UN Day Global Leadership Award recipient" },
   { stat: "Ph.D.", label: "Public Affairs, University of Texas at Dallas" },
 ];
 
