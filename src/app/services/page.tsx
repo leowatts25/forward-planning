@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/content";
 
@@ -27,24 +28,35 @@ export default function ServicesPage() {
         {services.map((service) => (
           <div
             key={service.slug}
-            className="rounded-2xl border border-border p-8"
+            className="overflow-hidden rounded-2xl border border-border"
           >
-            <h2 className="font-serif text-xl font-semibold text-primary">
-              {service.title}
-            </h2>
-            <p className="mt-3 text-sm leading-7 text-muted-foreground">
-              {service.description}
-            </p>
-            <dl className="mt-6 space-y-2 border-t border-border pt-4 text-sm">
-              <div className="flex gap-2">
-                <dt className="font-medium text-foreground">Format:</dt>
-                <dd className="text-muted-foreground">{service.format}</dd>
-              </div>
-              <div className="flex gap-2">
-                <dt className="font-medium text-foreground">Best for:</dt>
-                <dd className="text-muted-foreground">{service.bestFor}</dd>
-              </div>
-            </dl>
+            <div className="relative h-44 w-full">
+              <Image
+                src={service.image}
+                alt={service.imageAlt}
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="p-8">
+              <h2 className="font-serif text-xl font-semibold text-primary">
+                {service.title}
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                {service.description}
+              </p>
+              <dl className="mt-6 space-y-2 border-t border-border pt-4 text-sm">
+                <div className="flex gap-2">
+                  <dt className="font-medium text-foreground">Format:</dt>
+                  <dd className="text-muted-foreground">{service.format}</dd>
+                </div>
+                <div className="flex gap-2">
+                  <dt className="font-medium text-foreground">Best for:</dt>
+                  <dd className="text-muted-foreground">{service.bestFor}</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         ))}
       </div>

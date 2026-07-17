@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { navLinks, portfolio, siteConfig } from "@/lib/content";
+import { navLinks, portfolio, services, siteConfig } from "@/lib/content";
 
 const photoCredits = Array.from(
   new Set([
     siteConfig.heroImageCredit,
     siteConfig.teamBannerImageCredit,
     ...portfolio.map((item) => item.imageCredit),
+    ...services.map((service) => service.imageCredit),
   ])
 );
 

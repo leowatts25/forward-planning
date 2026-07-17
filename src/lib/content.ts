@@ -53,6 +53,9 @@ export type Service = {
   description: string;
   bestFor: string;
   format: string;
+  image: string;
+  imageAlt: string;
+  imageCredit: string;
 };
 
 export const services: Service[] = [
@@ -63,6 +66,9 @@ export const services: Service[] = [
       "With deep experience in executive management, business strategy, and global team leadership, we work alongside you to clarify direction, strengthen execution, and drive meaningful outcomes.",
     format: "Ongoing advisory or project-based",
     bestFor: "Leaders, executives, scaling organizations",
+    image: "/images/service-strategic-advisory.jpg",
+    imageAlt: "Team gathered around a table in a strategy meeting",
+    imageCredit: "Wikimedia Commons, CC BY-SA 2.0",
   },
   {
     slug: "entrepreneur-mentorship",
@@ -71,6 +77,9 @@ export const services: Service[] = [
       "We act as hands-on partners, bringing templates, financial expertise, and real-world experience to help you avoid costly mistakes and move faster with confidence.",
     format: "1:1 sessions or longer-term partnership",
     bestFor: "Early-stage founders, career pivoters",
+    image: "/images/service-mentorship.jpg",
+    imageAlt: "Two people shaking hands in a work office",
+    imageCredit: "perzon seo / Wikimedia Commons, CC BY 2.0",
   },
   {
     slug: "impact-measurement",
@@ -79,6 +88,9 @@ export const services: Service[] = [
       "Many organizations struggle to clearly demonstrate their impact. We help you define, measure, and communicate the difference you're making — so you can grow support and scale effectively.",
     format: "Metrics, storytelling, and validation frameworks",
     bestFor: "Nonprofits, social enterprises",
+    image: "/images/service-impact-measurement.jpg",
+    imageAlt: "Laptop screen showing charts and analytics",
+    imageCredit: "rawpixel / Wikimedia Commons, CC0",
   },
   {
     slug: "situational-assessment",
@@ -87,6 +99,9 @@ export const services: Service[] = [
       "Before you can move forward, you need to understand where you are. We help uncover your assets, challenges, and opportunities — then design a clear path toward your goals.",
     format: "Deep-dive assessment + actionable roadmap",
     bestFor: "Anyone at a crossroads or seeking direction",
+    image: "/images/service-situational-assessment.jpg",
+    imageAlt: "Team in a brainstorming and planning session",
+    imageCredit: "Inyor4mr / Wikimedia Commons, CC BY-SA 4.0",
   },
 ];
 
@@ -103,7 +118,7 @@ export const team: TeamMember[] = [
     slug: "doric-earle",
     name: "Dr. Doric Earle",
     role: "Founder & Principal Consultant",
-    bio: "After 30 years managing large technology consultancies, Dr. Earle reinvented himself around a single question: how do you use economic development, communication, and community engagement to unlock potential in underserved communities? He is a Professor of Practice at SMU's Meadows School of the Arts (Corporate Communication & Public Affairs), Director of Nonprofit & Arts Leadership Advisory, Co-Director of the SMU Impact Lab, and Director of the SMU-in-London program. He co-founded Restorative Farms — an award-winning, USDA-certified urban farm training and employing South Dallas residents — where he serves as volunteer CFO, and Dallas Unity Fund LLC, a community-based real estate platform. He also hosts the podcast Reinvent Yourself For Good. In 2023 he received the UN Day Global Leadership Award. He serves on the boards of Frazier Revitalization, Bridge Lacrosse, Green Careers Dallas, and Miles of Freedom.",
+    bio: "After 30 years managing large technology consultancies, Dr. Earle reinvented himself around a single question: how do you use economic development, communication, and community engagement to unlock potential in underserved communities? He is a Professor of Practice at SMU's Meadows School of the Arts (Corporate Communication & Public Affairs), Director of Nonprofit & Arts Leadership Advisory, Co-Director of the SMU Impact Lab, and Director of the SMU-in-London program. He co-founded Restorative Farms — an award-winning, USDA-certified urban farm training and employing South Dallas residents — where he serves as CFO, and Dallas Unity Fund LLC, a community-based real estate platform. He also hosts the podcast Reinvent Yourself For Good. In 2023 he received the UN Day Global Leadership Award. He serves on the boards of Frazier Revitalization, Bridge Lacrosse, Green Careers Dallas, and Miles of Freedom.",
     credentials: [
       "B.S. Management, Syracuse University",
       "M.B.A. Strategic Marketing, University of Connecticut",
@@ -159,7 +174,7 @@ export const portfolio: PortfolioItem[] = [
       "USDA certified",
       "Partners with DISD student interns and Dallas College",
       "2026 Texas Environmental Excellence Awards finalist",
-      "Co-founded with Dr. Owen Lynch, Brad Boa, and Tyrone Day; Dr. Earle serves as volunteer CFO",
+      "Co-founded with Dr. Owen Lynch, Brad Boa, and Tyrone Day; Dr. Earle serves as CFO",
     ],
     image: "/images/portfolio-restorative-farms.jpg",
     imageAlt: "Raised garden beds at an organic urban farm",
@@ -248,6 +263,23 @@ export const portfolio: PortfolioItem[] = [
     image: "/images/portfolio-the-hatchery.jpg",
     imageAlt: "Local shops in the Bishop Arts District, Dallas, Texas",
     imageCredit: "Michael Barera / Wikimedia Commons, CC BY-SA 4.0",
+  },
+  {
+    slug: "enterprise-technology-consulting",
+    name: "Enterprise & Global Technology Consulting",
+    category: "Corporate Technology & Operations Consulting",
+    summary:
+      "Three decades leading large-scale technology consultancies before Dr. Earle's shift to community and economic development — the operational and financial discipline behind everything Forward Planning does today.",
+    details: [
+      "VP, Global Technical Operations — CompuCom Systems: led shared services (end-user computing, data center, network, security, ITSM) across Dallas, Louisville, Toronto, Mexico City, and Pune, India",
+      "Program Management Office Leader — CompuCom Systems: governed all externalized client services delivery across a $100M+ global IT practice",
+      "Division Vice President — Affiliated Computer Services (ACS Xerox), another $100M+ global IT practice",
+      "Benchmarking Consultant — Alsbridge, a global sourcing and benchmarking advisory firm",
+      "Career origin at Coopers & Lybrand",
+    ],
+    image: "/images/portfolio-enterprise-consulting.jpg",
+    imageAlt: "Rows of servers in a data center",
+    imageCredit: "Ana Las Heras / Wikimedia Commons, CC BY-SA 4.0",
   },
 ];
 
