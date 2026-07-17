@@ -17,7 +17,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-muted">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:justify-between">
         <div className="max-w-sm">
-          <p className={`flex items-center gap-2 text-lg text-primary ${logoFont.className}`}>
+          <p className={`flex items-center gap-1.5 whitespace-nowrap text-lg text-primary ${logoFont.className}`}>
             <LogoMark className="h-6 w-6 shrink-0" />
             {siteConfig.name}
           </p>

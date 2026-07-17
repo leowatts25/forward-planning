@@ -13,12 +13,12 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
         <Link
           href="/"
-          className={`flex items-center gap-2 text-xl text-primary ${logoFont.className}`}
+          className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap text-lg text-primary ${logoFont.className}`}
         >
-          <LogoMark className="h-7 w-7 shrink-0" />
+          <LogoMark className="h-6 w-6 shrink-0" />
           {siteConfig.name}
         </Link>
 
