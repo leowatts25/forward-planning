@@ -67,8 +67,8 @@ export const services: Service[] = [
     format: "Ongoing advisory or project-based",
     bestFor: "Leaders, executives, scaling organizations",
     image: "/images/service-strategic-advisory.jpg",
-    imageAlt: "Team gathered around a table in a strategy meeting",
-    imageCredit: "Wikimedia Commons, CC BY-SA 2.0",
+    imageAlt: "Two people reviewing notes together at a table",
+    imageCredit: "Alejandro Escamilla / Unsplash via Wikimedia Commons, CC0",
   },
   {
     slug: "entrepreneur-mentorship",
@@ -100,8 +100,8 @@ export const services: Service[] = [
     format: "Deep-dive assessment + actionable roadmap",
     bestFor: "Anyone at a crossroads or seeking direction",
     image: "/images/service-situational-assessment.jpg",
-    imageAlt: "Team in a brainstorming and planning session",
-    imageCredit: "Inyor4mr / Wikimedia Commons, CC BY-SA 4.0",
+    imageAlt: "Handwritten strategic planning notes with a chart",
+    imageCredit: "rawpixel / Unsplash via Wikimedia Commons, CC0",
   },
 ];
 
