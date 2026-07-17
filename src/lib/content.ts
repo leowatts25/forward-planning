@@ -158,6 +158,7 @@ export const team: TeamMember[] = [
       "B.A. Interdisciplinary Studies, University of Texas at Dallas",
       "Master's in Human Rights, Interculturality and Development, Universidad Internacional de Andalucía (in progress)",
     ],
+    photo: "/images/team/leo-watts.jpg",
   },
   {
     slug: "aidan-earle",
@@ -165,7 +166,6 @@ export const team: TeamMember[] = [
     role: "Design and Marketing Director",
     bio: "Aidan is a Seattle-based graphic designer specializing in digital marketing and creative design, with expertise in animation, illustration, and 3D modeling.",
     photo: "/images/team/aidan-earle.jpg",
-    photoCredit: "Behance",
   },
 ];
 
