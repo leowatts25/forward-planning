@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/content";
+import { CalendlyEmbed } from "@/components/calendly-embed";
 
 export const metadata: Metadata = {
   title: "Contact | Forward Planning",
@@ -20,27 +21,18 @@ export default function ContactPage() {
         a free consultation.
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2">
-        <div className="space-y-4">
-          <div>
-            <p className="text-sm font-medium text-foreground">Email</p>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-muted-foreground hover:text-primary"
-            >
-              {siteConfig.email}
-            </a>
-          </div>
-        </div>
+      <div className="mt-12">
+        <p className="text-sm font-medium text-foreground">Email</p>
+        <a
+          href={`mailto:${siteConfig.email}`}
+          className="text-muted-foreground hover:text-primary"
+        >
+          {siteConfig.email}
+        </a>
+      </div>
 
-        <div className="rounded-2xl border border-border p-6">
-          <p className="text-sm font-medium text-foreground">
-            Book a free consultation
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Scheduling link coming soon.
-          </p>
-        </div>
+      <div className="mt-10">
+        <CalendlyEmbed />
       </div>
     </div>
   );
