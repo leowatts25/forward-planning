@@ -84,6 +84,16 @@ export const team: TeamMember[] = [
     ],
   },
   {
+    slug: "owen-lynch",
+    name: "Dr. Owen Lynch",
+    role: "Co-Founder & Executive Director, Restorative Farms",
+    bio: "Dr. Lynch is an Associate Professor of Corporate Communication & Public Affairs at SMU's Meadows School of the Arts and a Senior Research Fellow at the Hunt Institute for Engineering & Humanity. He co-founded Restorative Farms in 2017, building on a decade of research into food deserts and urban Agri-Systems, and now serves as its Executive Director. He previously directed Get Healthy Dallas, a nonprofit addressing food deserts and economic development in South Dallas. His research examines how systems, organizations, and communities are shaped through everyday discourse, using asset-based community development methods.",
+    credentials: [
+      "Associate Professor, SMU Meadows School of the Arts",
+      "Senior Research Fellow, Hunt Institute for Engineering & Humanity",
+    ],
+  },
+  {
     slug: "leo-watts",
     name: "Leo Watts",
     role: "Entrepreneurial Director",
