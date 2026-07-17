@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/content";
+import { ServiceIcon } from "@/components/service-icon";
 
 export const metadata: Metadata = {
   title: "How We Help | Forward Planning",
@@ -30,17 +30,9 @@ export default function ServicesPage() {
             key={service.slug}
             className="overflow-hidden rounded-2xl border border-border"
           >
-            <div className="relative h-44 w-full">
-              <Image
-                src={service.image}
-                alt={service.imageAlt}
-                fill
-                sizes="(min-width: 640px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
             <div className="p-8">
-              <h2 className="font-serif text-xl font-semibold text-primary">
+              <ServiceIcon name={service.icon} />
+              <h2 className="mt-5 font-serif text-xl font-semibold text-primary">
                 {service.title}
               </h2>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">

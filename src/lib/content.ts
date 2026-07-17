@@ -61,9 +61,7 @@ export type Service = {
   description: string;
   bestFor: string;
   format: string;
-  image: string;
-  imageAlt: string;
-  imageCredit: string;
+  icon: "compass" | "partnership" | "chart" | "target";
 };
 
 export const services: Service[] = [
@@ -74,9 +72,7 @@ export const services: Service[] = [
       "With deep experience in executive management, business strategy, and global team leadership, we work alongside you to clarify direction, strengthen execution, and drive meaningful outcomes.",
     format: "Ongoing advisory or project-based",
     bestFor: "Leaders, executives, scaling organizations",
-    image: "/images/service-strategic-advisory.jpg",
-    imageAlt: "Two people reviewing notes together at a table",
-    imageCredit: "Alejandro Escamilla / Unsplash via Wikimedia Commons, CC0",
+    icon: "compass",
   },
   {
     slug: "entrepreneur-mentorship",
@@ -85,9 +81,7 @@ export const services: Service[] = [
       "We act as hands-on partners, bringing templates, financial expertise, and real-world experience to help you avoid costly mistakes and move faster with confidence.",
     format: "1:1 sessions or longer-term partnership",
     bestFor: "Early-stage founders, career pivoters",
-    image: "/images/service-mentorship.jpg",
-    imageAlt: "Two people shaking hands in a work office",
-    imageCredit: "perzon seo / Wikimedia Commons, CC BY 2.0",
+    icon: "partnership",
   },
   {
     slug: "impact-measurement",
@@ -96,9 +90,7 @@ export const services: Service[] = [
       "Many organizations struggle to clearly demonstrate their impact. We help you define, measure, and communicate the difference you're making — so you can grow support and scale effectively.",
     format: "Metrics, storytelling, and validation frameworks",
     bestFor: "Nonprofits, social enterprises",
-    image: "/images/service-impact-measurement.jpg",
-    imageAlt: "Laptop screen showing charts and analytics",
-    imageCredit: "rawpixel / Wikimedia Commons, CC0",
+    icon: "chart",
   },
   {
     slug: "situational-assessment",
@@ -107,9 +99,7 @@ export const services: Service[] = [
       "Before you can move forward, you need to understand where you are. We help uncover your assets, challenges, and opportunities — then design a clear path toward your goals.",
     format: "Deep-dive assessment + actionable roadmap",
     bestFor: "Anyone at a crossroads or seeking direction",
-    image: "/images/service-situational-assessment.jpg",
-    imageAlt: "Handwritten strategic planning notes with a chart",
-    imageCredit: "rawpixel / Unsplash via Wikimedia Commons, CC0",
+    icon: "target",
   },
 ];
 
