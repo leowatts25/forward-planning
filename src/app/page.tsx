@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { podcast, portfolio, pressLogos, services, siteConfig } from "@/lib/content";
+import { ServiceIcon } from "@/components/service-icon";
 
 const credentials = [
   { stat: "30+", label: "years in executive & technology consulting" },
@@ -109,7 +110,8 @@ export default function Home() {
                 key={service.slug}
                 className="rounded-2xl border border-border bg-background p-6"
               >
-                <h3 className="font-serif text-lg font-semibold text-primary">
+                <ServiceIcon name={service.icon} />
+                <h3 className="mt-4 font-serif text-lg font-semibold text-primary">
                   {service.title}
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
