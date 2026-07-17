@@ -15,6 +15,29 @@ export const siteConfig = {
   teamBannerImageCredit: "Joe Mabel / Wikimedia Commons, CC BY-SA 3.0",
 };
 
+export const pressLogos = [
+  {
+    name: "SMU News",
+    logo: "/images/logos/smu.svg",
+    url: "https://www.smu.edu/news/latest/restorative-farms",
+  },
+  {
+    name: "D Magazine",
+    logo: "/images/logos/d-magazine.svg",
+    url: "https://www.dmagazine.com/food-drink/2023/12/why-dallas-sees-a-future-in-urban-farming/",
+  },
+  {
+    name: "CBS News Texas",
+    logo: "/images/logos/cbs-news.svg",
+    url: "https://www.cbsnews.com/texas/news/farming-for-the-future-healing-through-soil-and-second-chances/",
+  },
+  {
+    name: "NBC 5 Dallas-Fort Worth",
+    logo: "/images/logos/nbc.svg",
+    url: "https://www.nbcdfw.com/news/local/restorative-farms-cultivating-crops-entrepreneurs-in-south-dallas/3428633/",
+  },
+];
+
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "How We Help" },

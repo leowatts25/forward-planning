@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { portfolio, services, siteConfig } from "@/lib/content";
+import { portfolio, pressLogos, services, siteConfig } from "@/lib/content";
 
 const credentials = [
   { stat: "30+", label: "years in executive & technology consulting" },
@@ -63,6 +63,32 @@ export default function Home() {
               </div>
             ))}
           </dl>
+        </div>
+      </section>
+
+      <section className="border-b border-border py-12">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="text-center text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            As Featured In
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            {pressLogos.map((press) => (
+              <a
+                key={press.name}
+                href={press.url}
+                aria-label={press.name}
+                className="opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
+              >
+                <Image
+                  src={press.logo}
+                  alt={press.name}
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto object-contain"
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
