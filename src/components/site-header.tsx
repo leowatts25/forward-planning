@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks, siteConfig } from "@/lib/content";
+import { LogoMark } from "@/components/logo-mark";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -12,7 +13,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-serif text-xl font-semibold text-primary">
+        <Link href="/" className="flex items-center gap-2 font-serif text-xl font-semibold text-primary">
+          <LogoMark className="h-7 w-7 shrink-0" />
           {siteConfig.name}
         </Link>
 
