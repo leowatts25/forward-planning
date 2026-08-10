@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { podcast, portfolio, pressLogos, services, siteConfig } from "@/lib/content";
+import { podcast, pressLogos, siteConfig } from "@/lib/content";
+import { getPortfolioItems, getServices } from "@/sanity/lib/data";
 import { ServiceIcon } from "@/components/service-icon";
 
 const credentials = [
@@ -9,7 +10,14 @@ const credentials = [
   { stat: "Ph.D.", label: "Public Affairs, University of Texas at Dallas" },
 ];
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const [services, portfolio] = await Promise.all([
+    getServices(),
+    getPortfolioItems(),
+  ]);
+
   return (
     <>
       <section className="relative isolate overflow-hidden">

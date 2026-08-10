@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts } from "@/lib/content";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import { getBlogPostBySlug, getBlogPosts } from "@/sanity/lib/data";
+
+export const revalidate = 60;
 
 function formatDate(dateStr: string) {
   return new Date(`${dateStr}T00:00:00`).toLocaleDateString("en-US", {
@@ -11,8 +14,17 @@ function formatDate(dateStr: string) {
   });
 }
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+const portableTextComponents: PortableTextComponents = {
+  block: {
+    normal: ({ children }) => (
+      <p className="text-base leading-7 text-muted-foreground">{children}</p>
+    ),
+  },
+};
+
+export async function generateStaticParams() {
+  const posts = await getBlogPosts();
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -21,7 +33,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
   if (!post) return {};
   return {
     title: `${post.title} | Forward Planning`,
@@ -35,7 +47,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
   if (!post) notFound();
 
   return (
@@ -55,11 +67,7 @@ export default async function BlogPostPage({
       </h1>
 
       <div className="mt-8 space-y-5">
-        {post.body.map((paragraph, index) => (
-          <p key={index} className="text-base leading-7 text-muted-foreground">
-            {paragraph}
-          </p>
-        ))}
+        <PortableText value={post.body} components={portableTextComponents} />
       </div>
 
       {post.externalSource && (

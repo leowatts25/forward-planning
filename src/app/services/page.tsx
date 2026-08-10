@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { services } from "@/lib/content";
+import { getServices } from "@/sanity/lib/data";
 import { ServiceIcon } from "@/components/service-icon";
 
 export const metadata: Metadata = {
@@ -9,7 +9,11 @@ export const metadata: Metadata = {
     "Strategic advisory, entrepreneur mentorship, impact measurement, and situational assessment for entrepreneurs and nonprofits.",
 };
 
-export default function ServicesPage() {
+export const revalidate = 60;
+
+export default async function ServicesPage() {
+  const services = await getServices();
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">

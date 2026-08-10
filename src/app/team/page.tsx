@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { siteConfig, team } from "@/lib/content";
+import { siteConfig } from "@/lib/content";
+import { getTeamMembers } from "@/sanity/lib/data";
 
 export const metadata: Metadata = {
   title: "Team | Forward Planning",
@@ -8,7 +9,11 @@ export const metadata: Metadata = {
     "Meet the Forward Planning team: Dr. Doric Earle, Dr. Owen Lynch, Leo Watts, and Aidan Earle.",
 };
 
-export default function TeamPage() {
+export const revalidate = 60;
+
+export default async function TeamPage() {
+  const team = await getTeamMembers();
+
   return (
     <div>
       <div className="relative h-56 w-full sm:h-72">

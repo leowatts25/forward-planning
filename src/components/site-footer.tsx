@@ -1,18 +1,26 @@
 import Link from "next/link";
-import { navLinks, portfolio, siteConfig, team } from "@/lib/content";
+import { navLinks, siteConfig } from "@/lib/content";
+import { getPortfolioItems, getTeamMembers } from "@/sanity/lib/data";
 import { LogoMark } from "@/components/logo-mark";
 import { logoFont } from "@/lib/fonts";
 
-const photoCredits = Array.from(
-  new Set([
-    siteConfig.heroImageCredit,
-    siteConfig.teamBannerImageCredit,
-    ...portfolio.map((item) => item.imageCredit),
-    ...team.filter((member) => member.photoCredit).map((member) => member.photoCredit as string),
-  ])
-);
+export async function SiteFooter() {
+  const [portfolio, team] = await Promise.all([
+    getPortfolioItems(),
+    getTeamMembers(),
+  ]);
 
-export function SiteFooter() {
+  const photoCredits = Array.from(
+    new Set([
+      siteConfig.heroImageCredit,
+      siteConfig.teamBannerImageCredit,
+      ...portfolio.map((item) => item.imageCredit).filter(Boolean),
+      ...team
+        .filter((member) => member.photoCredit)
+        .map((member) => member.photoCredit as string),
+    ])
+  );
+
   return (
     <footer className="border-t border-border bg-muted">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:justify-between">

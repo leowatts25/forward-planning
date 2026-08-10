@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { portfolio } from "@/lib/content";
+import { getPortfolioItems } from "@/sanity/lib/data";
 
 export const metadata: Metadata = {
   title: "Portfolio | Forward Planning",
@@ -8,7 +8,11 @@ export const metadata: Metadata = {
     "Ventures we've helped launch and grow, including Restorative Farms, Hatcher Station Community Garden Training Farm, The Hatchery, and the SMU Impact Lab.",
 };
 
-export default function PortfolioPage() {
+export const revalidate = 60;
+
+export default async function PortfolioPage() {
+  const portfolio = await getPortfolioItems();
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">

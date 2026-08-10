@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/lib/content";
+import { getBlogPosts } from "@/sanity/lib/data";
 
 export const metadata: Metadata = {
   title: "Blog | Forward Planning",
   description: "Notes on social entrepreneurship, community development, and reinvention from Forward Planning.",
 };
+
+export const revalidate = 60;
 
 function formatDate(dateStr: string) {
   return new Date(`${dateStr}T00:00:00`).toLocaleDateString("en-US", {
@@ -15,7 +17,9 @@ function formatDate(dateStr: string) {
   });
 }
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const blogPosts = await getBlogPosts();
+
   return (
     <div className="mx-auto max-w-4xl px-6 py-20">
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">
