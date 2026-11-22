@@ -37,7 +37,7 @@ export default async function Home() {
               {siteConfig.tagline}
             </p>
             <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight text-primary-foreground sm:text-5xl">
-              Strategic consulting for entrepreneurs & nonprofits
+              Strategic consulting for entrepreneurs & nonprofits (TEST)
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-foreground/85">
               Whether you&apos;re launching a business, scaling an organization, or
