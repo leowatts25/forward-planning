@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/content";
+import { getSiteSettings } from "@/sanity/lib/data";
 import { CalendlyEmbed } from "@/components/calendly-embed";
 
 export const metadata: Metadata = {
@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   description: "Get in touch with Forward Planning to book a free consultation.",
 };
 
-export default function ContactPage() {
+export const revalidate = 60;
+
+export default async function ContactPage() {
+  const settings = await getSiteSettings();
+
   return (
     <div className="mx-auto max-w-4xl px-6 py-20">
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">
@@ -24,15 +28,15 @@ export default function ContactPage() {
       <div className="mt-12">
         <p className="text-sm font-medium text-foreground">Email</p>
         <a
-          href={`mailto:${siteConfig.email}`}
+          href={`mailto:${settings.email}`}
           className="text-muted-foreground hover:text-primary"
         >
-          {siteConfig.email}
+          {settings.email}
         </a>
       </div>
 
       <div className="mt-10">
-        <CalendlyEmbed />
+        <CalendlyEmbed url={settings.calendlyUrl} />
       </div>
     </div>
   );

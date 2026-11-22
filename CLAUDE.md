@@ -20,12 +20,13 @@ Most editable text is **not in this repo**. It lives in Sanity (project `uhovvxa
 | Blog posts | Sanity: "Blog Post" |
 | Portfolio entries | Sanity: "Portfolio Item" |
 | The four "How We Help" services | Sanity: "Service" |
+| Contact email, Facebook/LinkedIn/podcast links, Calendly booking link | Sanity: "Site Settings" |
 
 Editing those through code will not change the live site. Use Sanity (`https://forward-planning-consulting.sanity.studio/`) or the Sanity MCP connector. Edits are drafts until published.
 
 What **is** in this repo:
 
-- `src/lib/content.ts`: site config (email, social links), nav links, press logos, podcast teaser
+- `src/lib/content.ts`: site name and tagline, hero/banner images, nav links, press logos, podcast teaser text
 - `src/app/`: pages (home, services, portfolio, team, blog, contact)
 - `src/components/`: header, footer, logo, service icons, Calendly embed
 - `src/sanity/`: Sanity schemas, queries, and data-fetching helpers
@@ -49,6 +50,6 @@ npm run build                # run this before opening a pull request
 
 ## Known open items
 
-- Booking: `siteConfig.calendlyUrl` in `src/lib/content.ts` is empty until a Calendly account exists. The contact page shows a fallback message until then.
+- Booking: the "Booking Link (Calendly)" field in Sanity Site Settings is empty until a Calendly account exists. The contact page shows a "coming soon" message until then.
 - Testimonials: none yet.
 - Restorative Farms and Hatcher Station photos are stand-in stock photos, not the real sites.

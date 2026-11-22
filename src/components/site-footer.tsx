@@ -1,13 +1,18 @@
 import Link from "next/link";
 import { navLinks, siteConfig } from "@/lib/content";
-import { getPortfolioItems, getTeamMembers } from "@/sanity/lib/data";
+import {
+  getPortfolioItems,
+  getSiteSettings,
+  getTeamMembers,
+} from "@/sanity/lib/data";
 import { LogoMark } from "@/components/logo-mark";
 import { logoFont } from "@/lib/fonts";
 
 export async function SiteFooter() {
-  const [portfolio, team] = await Promise.all([
+  const [portfolio, team, settings] = await Promise.all([
     getPortfolioItems(),
     getTeamMembers(),
+    getSiteSettings(),
   ]);
 
   const photoCredits = Array.from(
@@ -43,17 +48,17 @@ export async function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-          <a href={`mailto:${siteConfig.email}`} className="hover:text-primary">
-            {siteConfig.email}
+          <a href={`mailto:${settings.email}`} className="hover:text-primary">
+            {settings.email}
           </a>
           <div className="mt-2 flex gap-4">
-            <a href={siteConfig.facebook} className="hover:text-primary">
+            <a href={settings.facebook} className="hover:text-primary">
               Facebook
             </a>
-            <a href={siteConfig.linkedin} className="hover:text-primary">
+            <a href={settings.linkedin} className="hover:text-primary">
               LinkedIn
             </a>
-            <a href={siteConfig.podcast} className="hover:text-primary">
+            <a href={settings.podcast} className="hover:text-primary">
               Podcast
             </a>
           </div>

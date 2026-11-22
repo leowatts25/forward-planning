@@ -3,11 +3,6 @@ export const siteConfig = {
   tagline: "From Idea to Impact",
   description:
     "Strategic consulting for entrepreneurs and nonprofits — turning ideas into sustainable, measurable impact.",
-  email: "doric@forwardplanning.biz",
-  facebook: "https://www.facebook.com/forwardplanning.biz/",
-  linkedin: "https://www.linkedin.com/company/forwardplanning/",
-  podcast: "https://www.reinvent4good.org/",
-  calendlyUrl: "",
   heroImage: "/images/hero-dallas-skyline.jpg",
   heroImageAlt: "Downtown Dallas skyline with the Arts District",
   heroImageCredit: "Gattacal / Wikimedia Commons, CC BY-SA 4.0",

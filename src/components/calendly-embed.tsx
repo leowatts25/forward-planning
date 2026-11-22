@@ -1,10 +1,9 @@
 "use client";
 
 import Script from "next/script";
-import { siteConfig } from "@/lib/content";
 
-export function CalendlyEmbed() {
-  if (!siteConfig.calendlyUrl) {
+export function CalendlyEmbed({ url }: { url: string }) {
+  if (!url) {
     return (
       <div className="rounded-2xl border border-border p-8 text-center">
         <p className="text-sm font-medium text-foreground">
@@ -21,7 +20,7 @@ export function CalendlyEmbed() {
     <div className="overflow-hidden rounded-2xl border border-border">
       <div
         className="calendly-inline-widget"
-        data-url={siteConfig.calendlyUrl}
+        data-url={url}
         style={{ minWidth: "320px", height: "700px" }}
       />
       <Script

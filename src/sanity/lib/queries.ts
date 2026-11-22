@@ -50,3 +50,11 @@ export const blogPostBySlugQuery = `*[_type == "blogPost" && slug.current == $sl
   body,
   externalSource
 }`;
+
+export const siteSettingsQuery = `*[_type == "siteSettings" && _id == "siteSettings"][0] {
+  email,
+  facebook,
+  linkedin,
+  podcast,
+  calendlyUrl
+}`;

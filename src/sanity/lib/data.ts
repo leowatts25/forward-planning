@@ -6,6 +6,7 @@ import {
   portfolioItemsQuery,
   blogPostsQuery,
   blogPostBySlugQuery,
+  siteSettingsQuery,
 } from "./queries";
 
 type SanityImage = {
@@ -120,4 +121,31 @@ export type BlogPostDoc = BlogPostListDoc & {
 
 export async function getBlogPostBySlug(slug: string) {
   return client.fetch<BlogPostDoc | null>(blogPostBySlugQuery, { slug });
+}
+
+export type SiteSettingsDoc = {
+  email?: string;
+  facebook?: string;
+  linkedin?: string;
+  podcast?: string;
+  calendlyUrl?: string;
+};
+
+const siteSettingsFallback = {
+  email: "doric@forwardplanning.biz",
+  facebook: "https://www.facebook.com/forwardplanning.biz/",
+  linkedin: "https://www.linkedin.com/company/forwardplanning/",
+  podcast: "https://www.reinvent4good.org/",
+  calendlyUrl: "",
+};
+
+export async function getSiteSettings() {
+  const doc = await client.fetch<SiteSettingsDoc | null>(siteSettingsQuery);
+  return {
+    email: doc?.email || siteSettingsFallback.email,
+    facebook: doc?.facebook || siteSettingsFallback.facebook,
+    linkedin: doc?.linkedin || siteSettingsFallback.linkedin,
+    podcast: doc?.podcast || siteSettingsFallback.podcast,
+    calendlyUrl: doc?.calendlyUrl || siteSettingsFallback.calendlyUrl,
+  };
 }
